@@ -10,4 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)backgroundTap: (id)sender;
+
 @end
+

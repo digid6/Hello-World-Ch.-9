@@ -9,6 +9,10 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *txtName;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblOutput;
+
 
 @end
 
@@ -24,6 +28,20 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)showOutput:(UIButton *)sender {
+    NSString *name = [_txtName text];
+    NSString *output = [NSString stringWithFormat:
+                        @"Hello World", name];
+    
+    [_lblOutput setText:output];
+
+}
+
+- (IBAction)backgroundTap:(id)sender
+{
+    [self.view endEditing:YES];
 }
 
 @end
